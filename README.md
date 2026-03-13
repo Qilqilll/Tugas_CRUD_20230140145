@@ -9,12 +9,6 @@ Tugas CRUD KTP menggunakan Spring Boot sebagai backend dan HTML/CSS/JS (JQuery A
 - **UI Premium**: Tampilan modern dengan Inter font, bayangan halus, dan animasi transisi.
 - **Notifikasi**: Menggunakan SweetAlert2 untuk feedback aksi yang interaktif.
 
-## Teknologi yang Digunakan
-- **Backend**: Java 17, Spring Boot 3.2.3, Spring Data JPA, Hibernate.
-- **Frontend**: HTML5, Vanilla CSS3, JavaScript (JQuery 3.7.1).
-- **Database**: MySQL.
-- **Library Tambahan**: Lombok, Spring Validation, Font Awesome, SweetAlert2.
-
 ## Dokumentasi API
 
 | Method | Endpoint | Deskripsi |
@@ -43,5 +37,5 @@ Tugas CRUD KTP menggunakan Spring Boot sebagai backend dan HTML/CSS/JS (JQuery A
 4. Akses aplikasi di `http://localhost:8081`.
 
 ## Pengembang
-- **Nama**: [Nama Anda]
+- **Nama**: Muhammad Aqil Firdaus
 - **NIM**: 20230140145
