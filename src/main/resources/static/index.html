@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Data KTP - Premium</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-id-card"></i> Sistem Data KTP</h1>
+            <p>Manajemen Identitas Penduduk Terintegrasi</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Form Section -->
+            <section class="card form-section shadow-lg">
+                <div class="card-header">
+                    <h2 id="form-title">Tambah Data KTP</h2>
+                </div>
+                <form id="ktp-form">
+                    <input type="hidden" id="ktp-id">
+                    <div class="form-group">
+                        <label for="nomorKtp"><i class="fas fa-hashtag"></i> Nomor KTP</label>
+                        <input type="text" id="nomorKtp" name="nomorKtp" required maxlength="16" placeholder="Masukkan 16 digit NIK">
+                    </div>
+                    <div class="form-group">
+                        <label for="namaLengkap"><i class="fas fa-user"></i> Nama Lengkap</label>
+                        <input type="text" id="namaLengkap" name="namaLengkap" required placeholder="Sesuai Akta Kelahiran">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat"><i class="fas fa-map-marker-alt"></i> Alamat</label>
+                        <input type="text" id="alamat" name="alamat" required placeholder="Nama Jalan, RT/RW, Dusun">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group flex-1">
+                            <label for="tanggalLahir"><i class="fas fa-calendar-alt"></i> Tanggal Lahir</label>
+                            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label for="jenisKelamin"><i class="fas fa-venus-mars"></i> Jenis Kelamin</label>
+                            <select id="jenisKelamin" name="jenisKelamin" required>
+                                <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="btn-submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Data</button>
+                        <button type="button" id="btn-cancel" class="btn btn-secondary" style="display: none;"><i class="fas fa-times"></i> Batal</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Table Section -->
+            <section class="card table-section shadow-lg">
+                <div class="card-header">
+                    <h2>Daftar KTP Terdaftar</h2>
+                    <div class="table-actions">
+                        <button id="btn-refresh" class="btn btn-outline"><i class="fas fa-sync-alt"></i> Segarkan</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="ktp-table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>NIK</th>
+                                <th>Nama Lengkap</th>
+                                <th>Alamat</th>
+                                <th>Lahir</th>
+                                <th>L/P</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ktp-list">
+                            <!-- Data will be loaded here -->
+                        </tbody>
+                    </table>
+                    <div id="empty-state" class="empty-state">
+                        <i class="fas fa-inbox fa-3x"></i>
+                        <p>Belum ada data KTP.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
